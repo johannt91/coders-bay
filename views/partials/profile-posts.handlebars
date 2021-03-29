@@ -1,0 +1,12 @@
+<div class="cardWithComments" style=" background: rgb(211, 211, 211)">
+  <div class="card-body post-body">    
+    <h5 class="card-title" id="{{id}}">{{title}}</a></h5>
+    <p class="card-text">{{content}}</p>
+    {{format_date created_at}}
+    <br>
+    <span>{{comments.length}} {{format_plural "comment" comment.length}}</span>
+  </div>
+  <div class="edit-post-btn">
+        <a href="/userprofile/edit/{{id}}" class="edit-link btn btn-warning btn-lg">Edit post</a>
+      </div>
+</div>

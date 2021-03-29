@@ -1,0 +1,73 @@
+<section class="jumbotron">
+  <div class="about">
+    <h1>The Coders Bay</h1>
+    <p class="description">Welcome to the hub of Tech Talent (new and veterans)! <br>
+      We are committed to providing the ultimate resource guide,
+      <br> acccess and commitment to building meaningful
+      <br> relationships in Tech!
+      <br>
+    {{#if loggedIn}}
+    <h2 class="description"><a href='#join_chatroom'> {{first_name}}, what's bugging you?! </a></h2>
+    {{else}}
+    <h2 class="description"><a href='/login'> Join the Conversation! </a></h2>
+    {{/if}}
+    </p>
+  </div>
+  <div class="arrow">
+    <a href="#about">
+      <i class="glyphicon glyphicon-chevron-down"></i>
+    </a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="row services">
+    <div class="col-sm-4 content-description">
+      <img src="img/codebuddy.png" class="about-img" alt="Two persons working together">
+      <h2>Coding Buddies</h2>
+      <p>Looking for a friend to bounce ideas and work on a project?</p>
+      <p>Access to an unlimited pool of likeminded buddies with the same Tech objective! Have fun while building a cool
+        project together!</p>
+    </div>
+    <div class="col-sm-4 content-description">
+      <img src="img/codecoach.png" class="about-img" alt="Lifting dumbell while using laptop">
+      <h2>Coding Coaches</h2>
+      <p>Need a mentor to guide you in your start-up?</p>
+      <p>Access to world experts to mentor you in your next project!</p>
+    </div>
+    <div class="col-sm-4 content-description">
+      <img src="img/codescreen.png" class="about-img" alt="Screen with php code">
+      <h2>Forum</h2>
+      <p>Stumped, or seeking answers to a problem?</p>
+      <p>Get the conversation started on any problems or to quench your curiosity! You maybe helping someone else with
+        their problem, as well, making buddies as you go!</p>
+    </div>
+  </div>
+
+  {{#if loggedIn}}
+<aside>
+  <div class="joinbox">
+    <a id="join_chatroom">
+  <form action="chatroom"></a>
+    <div class="chat-control">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" placeholder="Enter username..." required />
+      <div>
+        <label for="room">Room</label>
+        <select name="room" id="room">
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="PHP">PHP</option>
+          <option value="C#">C#</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Java">Java</option>
+        </select>
+      </div> 
+      <button type="submit" class="btn bg-dark text-light">Join Chat</button>
+    </div>
+  </form>
+  </div>
+</aside>
+{{/if}}
+
+</section>

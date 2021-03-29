@@ -1,0 +1,10 @@
+<div class="cardWithComments" style=" background: rgb(211, 211, 211)">
+  <div class="card-body">    
+    <h5 class="card-title" id="{{id}}">{{title}}</a></h5>
+    {{!-- <h4 style="background-color: yellow; text-align:center;">sortSkills({{skills}});</h4> --}}
+    <h4 onload="sortSkills({{skills}})"></h4>
+    <p class="card-text">{{content}}</p>    
+    <button type='submit' onclick="commentButtonAction({{id}})" class="btn btn-primary">Comment</button>
+    <span> -- {{comments.length}} {{ format_plural 'comment' comment.length}}</span>
+  </div>  
+</div>

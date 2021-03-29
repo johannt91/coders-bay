@@ -1,0 +1,30 @@
+<section class="coach-profiles">
+  <div class="page-title">
+    <h1>Coach Profiles</h1>
+  </div>
+  <div class="user-profiles">
+    {{#each users}}
+    <div class="card">
+      <div class="card-body">
+        {{#if image}}
+        <img src="{{image}}" alt='noImage' class="profile-card-img headlinePost-title">
+        {{else}}
+        <img src="img/no_image.png" alt='noImage' class="profile-card-img headlinePost-title">
+        {{/if}}
+        <h2 class="card-title">{{first_name}} {{last_name}}</h2>
+        <span>{{role}}</span>
+        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, sunt?</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating 5/5</li>
+        <li class="list-group-item">Skills: {{knowledgeable_in}}</li>
+      </ul>
+      <div class="card-body profile-links">
+        <a href="#" class="card-link">Message</a>
+        |
+        <a href="#" class="card-link">Full Profile</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>

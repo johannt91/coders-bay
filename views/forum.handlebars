@@ -1,0 +1,72 @@
+<section class="forum-main">
+  <div class="forum-posts">
+    <h1>FORUM</h1>
+    <div class="dropdown" style="margin-bottom: 3%">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Sort by topic
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/post/1">Python</a>
+        <a class="dropdown-item" href="/post/2">HTML</a>
+        <a class="dropdown-item" href="/post/3">CSS</a>
+        <a class="dropdown-item" href="/post/4">JavaScript</a>
+        <a class="dropdown-item" href="/post/5">TypeScript</a>
+        <a class="dropdown-item" href="/post/6">Java</a>
+        <a class="dropdown-item" href="/post/7">Ruby</a>
+      </div>
+    </div>
+
+
+    {{#each posts as |post|}}
+    <li>
+      {{> forum-info post}}
+    </li>
+
+    <div id="comments">
+      <div class="container">
+        <div class="row comments-row">
+          <div class="col-sm-8">
+            <h2>Comments</h2>
+
+            {{!-- COMMENT START --}}
+            {{> comment-info post.comments}}
+            {{!-- COMMENT END --}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Comment: This is for the post --}}
+    {{/each}}
+
+  </div>
+
+  <aside class="latest-forum-posts">
+    <h2>Latest posts</h2>
+    <div class="latest-post-list">
+
+        {{#each posts as |post|}}
+        <a href="#{{post.id}}">
+          <div class="latest-post-title">
+            <h4>{{post.title}}</h4>
+          </div>
+        </a>
+        {{/each}}
+
+      {{!-- Relative button to go to top --}}
+      <div class="headlineBackTop">
+        <h4><a href="#top">Back to the top!</a></h4>
+      </div>
+    </div>
+  </aside>
+</section>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
+{{!-- {{#if loggedIn}} --}}
+{{!-- Comment: This is for the post --}}
+<script src="/javascript/comment-button.js"></script>
+
+<script src="/javascript/skill-sort.js"></script>
+{{!-- {{/if}} --}}

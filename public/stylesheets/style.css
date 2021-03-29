@@ -1,0 +1,950 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/********* MAIN PAGE STYLING ********/
+header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
+
+.navbar-brand {
+  font-size: 1.8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 1.3vw;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.jumbotron {
+  background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../img/landing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  color: rgb(190, 189, 189);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about {
+  margin-left: 3%;
+  margin-top: 10%;
+}
+
+
+.about h1 {
+  width: auto;
+  overflow: hidden;
+  font-size: 4vw;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: inline-block;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0
+  }
+
+  to {
+    max-width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+.about p {
+  font-weight: 400;
+  margin-top: 3%;
+  line-height: 1.7;
+  font-size: 1.4vw;
+}
+
+.about h2{
+  font-size: 2vw;
+}
+
+.description {
+  animation: 2.5s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 2.5s ease 0s normal forwards 1 fadein;
+  opacity: 1
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+}
+
+.glyphicon-chevron-down {
+  font-size: 3vw;
+  color: #718484;
+  -webkit-animation: bounce 6s infinite;
+  animation: bounce 6s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 50px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 50px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 50px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 50px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+#about {
+  background-color: #718484;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5%;
+}
+
+.services{
+  margin: 15rem auto 0 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.1vw;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+/********* MAIN PAGE STYLING END ********/
+
+.edit-input {
+  background-color: #e4e4e4;
+  color: rgb(63, 63, 63);
+  font-size: 1.7vw;
+}
+
+
+.btn-dark {
+  background-color: #000;
+  color: #ccc;
+  margin: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+.login-form {
+  width: 30%;
+  margin: auto;
+  padding: 0 2%;
+  border: 1px solid;
+  border-radius: 30px;
+  background-color: #ccc;
+}
+
+.login-btn {
+  margin: 0 auto 6% auto;
+  width: 25%;
+}
+
+.register {
+  padding-top: 7%;
+}
+
+.register-form {
+  width: 50%;
+  margin: 0 auto 2% auto;
+  background-color: #ccc;
+  padding: 1% 2% 2%;
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.form-control {
+  height: 4vw;
+  margin-bottom: 5px;
+  
+}
+
+.joinbox {
+  display: flex;
+  justify-content: center;
+  padding: 0 30%;
+  margin-top: 5%;
+
+}
+.user-name-register {
+  display: flex;
+  flex-direction: row;
+}
+
+.name-register {
+  margin-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.commentAlignment {
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.cardWithComments {
+  margin-bottom: 0;
+  padding: 2rem 3%;
+  text-align: -webkit-auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-body {
+  margin: 0;
+}
+
+.post-body h5 {
+  font-size: 2vw;
+}
+
+.post-body p {
+  font-size: 1.7vw;
+}
+
+/******** USER PROFILE POSTS ********/
+.profile-posts {
+  background-color: #718484;
+  padding: 50px;
+  min-height: 63vh;
+}
+
+.headlinePost-title {
+  display: flex;
+  align-items: center;
+}
+
+.headlinePosts div:hover {
+  background-color: lightblue;
+}
+
+.headlineBackTop {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  text-align: center;
+  background-color: lightblue;
+}
+
+/****** PERSONAL PROFILE STYLES *******/
+.page-title {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: rgb(197, 195, 195);
+}
+
+.page-title h1, h3 {
+  font-size: 3.2vw;
+  font-weight: normal;
+  padding-bottom: 1%;
+  border-bottom: 3px solid;
+}
+
+.post-form {
+  width: 50%;
+  padding: 0 5% 0 5%;
+  margin: 0;
+}
+
+.profile {
+  margin: auto;
+  background-color: #36454f;
+  padding-top: 5%;
+}
+
+.user-profile-img {
+  height: 175px;
+  width: 189px;
+  margin: 0 auto;
+}
+
+.user-about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 10% 2% 3%;
+  font-size: 1.1vw;
+  line-height: 1.5;
+  border-radius: 5%;
+  padding: 0 3% 1%;
+}
+
+.user-about h4 {
+  padding-bottom: 5%;
+  margin-top: 0;
+  font-size: 3vw;
+  color: rgb(197, 195, 195);
+}
+
+.user-about p {
+  font-size: 1.3vw;
+  color: rgb(197, 195, 195);
+}
+
+.user-about a {
+  color: rgb(137, 151, 214);
+}
+
+.user-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15%;
+}
+
+.highlighter {
+  background-color: #A7776B;
+  padding: 2% 5%;
+  border-radius: 50px;
+}
+
+.edit-form {
+  padding: 10% 0 5% 0;
+  min-height: auto;
+  background-color: #849170;
+  min-height: 95vh;
+}
+
+.edit-post-btn {
+margin: 0;
+}
+
+.edit-btn {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.media-body h4 {
+  font-size: 2vw;
+}
+
+.media-body {
+  font-size: 1.2vw;
+}
+/*******  END *******/
+
+
+/******** FORUM STYLING START ********/
+.forum-main {
+  display: flex;
+  flex-direction: row;
+  padding: 65px 0;
+  background-color: #A7776B;
+}
+.forum-main h1 {
+  padding: 2% 0 2% 3%;
+  color: #ccc;
+}
+
+.bounties-posts, .forum-posts {
+  width: 100%;
+}
+
+.latest-forum-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #718484;
+  padding: 0 3%;
+}
+
+/************ BOUNTIES FORUM STYLE START *************/
+.bounties-forum {
+  display: flex;
+  flex-direction: row;
+  padding: 65px 0;
+  background-color: #718484;
+}
+
+.bounties-forum h1 {
+  padding: 2% 0 2% 3%;
+  color: #ccc;
+}
+
+.latest-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #A7776B;
+  padding: 0 3%;
+}
+
+.latest-posts, .latest-forum-posts h2 {
+  margin-bottom: 38px;
+  padding-top: 10px;
+
+}
+
+
+.latest-post-title {
+  padding: 30px 5px;
+  color: rgb(198, 220, 248);
+}
+
+.latest-post-list {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* USER PROFILES STYLE START */
+
+.coach-profiles {
+  background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../img/coach-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  color: rgb(190, 189, 189);
+  margin-bottom: 0;
+  padding: 100px;
+}
+
+.user-profiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 0 20px; */
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: box-shadow 1s;
+  background-color: #1D1B14;
+}
+
+.card:hover {
+  box-shadow: 0 0 3px #515151;
+}
+
+.card-title {
+  font-size: 1.8vw;
+}
+
+.card-text {
+  font-size: 1.2vw;
+}
+
+.profile-card-img {
+  height: 275px;
+  width: 200px;
+  margin: auto;
+  object-fit: scale-down;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-links a {
+  margin: 0 3%;
+}
+
+/* USER PROFILE STYLE END */
+
+/******************************************/
+
+/* EDIT POST FORM START */
+
+.edit-post-form {
+  width: 50%;
+  margin: auto;
+  padding: 0 2%;
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.post-details {
+  margin-bottom: 3%;
+}
+
+.button-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
+
+.comment-form {
+  width: 30%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+/* EDIT POST FORM END */
+
+/********** FORUM COMMENTS STYLING START ***********/
+.content-item {
+  padding: 30px 0;
+  background-color: #FFFFFF;
+}
+
+.content-item.grey {
+  background-color: #F0F0F0;
+  padding: 50px 0;
+  height: 100%;
+}
+
+.content-item h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.content-item h3 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+  margin: 10px 0 15px;
+  padding: 0;
+}
+
+.content-headline {
+  height: 1px;
+  text-align: center;
+  margin: 20px 0 70px;
+}
+
+.content-headline h2 {
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: -20px auto 0;
+  padding: 0 20px;
+}
+
+.grey .content-headline h2 {
+  background-color: #F0F0F0;
+}
+
+.content-headline h3 {
+  font-size: 14px;
+  color: #AAAAAA;
+  display: block;
+}
+
+
+.comments-row {
+  color: white;
+  padding-top: 20px;
+}
+
+#comments {
+  box-shadow: 0 -1px 6px 1px rgba(0, 0, 0, 0.1);
+  background-color: #849170;
+  margin-bottom: 3%;
+}
+
+#comments .media {
+  border-top: 1px dashed #DDDDDD;
+  padding: 20px 0;
+  margin: 0;
+}
+
+#comments .media>.pull-left {
+  margin-right: 20px;
+}
+
+#comments .media img {
+  max-width: 100px;
+  border: 1px solid;
+}
+
+#comments .media h4 {
+  margin: 0 0 10px;
+}
+
+#comments .media h4 span {
+  font-size: 14px;
+  float: right;
+  color: #999999;
+}
+
+#comments .media p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+#comments .media-detail {
+  margin: 0;
+}
+
+#comments .media-detail li {
+  color: #F0F0F0;
+  font-size: 1.2vw;
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+#comments .media-detail a:hover {
+  text-decoration: underline;
+}
+
+#comments .media-detail li:last-child {
+  padding-right: 0;
+}
+
+#comments .media-detail li i {
+  color: #666666;
+  font-size: 1.7vw;
+  margin-right: 10px;
+}
+/********** FORUM COMMENTS STYLING START ***********/
+
+footer {
+  position: sticky;
+  top: 100%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+
+/*************** INPUT STYLE *********************************/
+
+.input-color{
+  background-color: #1D1C14; 
+  color:white
+}
+
+/*************** REGISTRATION FORM ****************************/
+.registration-design{
+  background-color: #859877; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  margin: 0 auto 0 auto;
+}
+
+.not-found {
+  padding: 200px;
+  min-height: 95vh;
+  text-align: center;
+}
+
+.not-found a {
+  font-size: 3vw;
+}
+
+/****  CHATROOM *****/
+.socket-div{
+  box-sizing: border-box;
+  margin: 10px;
+  padding-top: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: #e4e4e4;
+  min-height: 90vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background: #718484;
+  border: 0;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+/** buddies chat**/
+
+.chat-container {
+	max-width: auto;
+	background: #FFFFFF ;
+  margin: 5px auto;
+	overflow: hidden;
+  display: flexbox;
+}
+
+.chat-header {
+  background: #849170;
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+  padding: 15px;
+	display: flex;
+	justify-content: left;
+	align-items: baseline;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: #849170;
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+ 	background-color:#999999;
+	border-radius: 15px;
+	overflow-y: scroll;
+  font-size: 15px;
+	font-weight: bold;
+	color: #161616;
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+#conversationHistory {
+  display: contents;
+}
+.chat-form-container {
+	padding: 20px 30px;
+	justify-content: left;
+	align-items: baseline;
+  max-width: auto;
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 5;
+}
+
+.chat-control{
+  height: auto;
+  width: fit-content;
+  margin-bottom: 2%;
+  align-items: center;
+  background-color: #A7776B;
+  padding: 5px 5px;
+  
+}
+
+@media screen and (max-width: 980px) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .about {
+    margin-left: 10%;
+    margin-top: 25%;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  nav div {
+    display: block;
+  }
+  .navbar-brand {
+    font-size: 4vw;
+  }
+  .about {
+    margin-top: 400px;
+  }
+
+  .about h1 {
+    font-size: 5vw;
+  }
+  .about p {
+    font-weight: 400;
+    margin-top: 3%;
+    line-height: 1.7;
+    font-size: 3vw;
+  }
+  
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  .content-description {
+    margin-bottom: 15px;
+  }
+
+  .about h2{
+    font-size: 2vw;
+  }
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 575px) {
+  .navbar-brand {
+    font-size: 5vw;
+  }
+
+  nav div {
+    display: block;
+  }
+
+  .nav-item {
+    font-size: 3vw;
+  }
+
+  .about {
+    margin-top: 300px;
+  }
+
+  .content-description p {
+    font-size: 2vw;
+  }
+
+  .glyphicon-chevron-down {
+    font-size: 6vw;
+  }
+
+  .profile-card-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}

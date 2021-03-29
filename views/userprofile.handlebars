@@ -1,0 +1,81 @@
+<section class="profile">
+  <div class="page-title">
+    <h1>My Profile</h1>
+  </div>
+  {{!-- USER PROFILE --}}
+  <section class="user-section">
+    <div class="user-about">
+      <h4>{{role}}</h4>
+      {{#if image}}
+      <img src="{{image}}" alt='withImage' class="user-profile-img">
+      {{else}}
+      <img src="img/no_image.png" alt='noImage' class="user-profile-img">
+      {{/if}}
+      <p>First Name: {{first_name}}</p>
+      <p>Last Name: {{last_name}}</p>
+      <p>Email: <a href="mailto:{{email}}">{{email}}</a></p>
+      <p>Knowledgeable in: <span class="highlighter">{{knowledgeable_in}}</span></p>
+    </div>
+
+    {{!-- CREATE POST FORM --}}
+    <form class="post-form">
+      <div class="form-group">
+        <label for="post-title"></label>
+        <input class="form-control" type="text" id="post-title" name="post-title" placeholder="Post Title" />
+      </div>
+      <div class="form-group">
+        <label for="content"></label>
+        <input class="form-control" id="content" name="content" placeholder="Content" />
+      </div>
+      <div class="form-group">
+        <label for="post-type"></label>
+        <select name='type' id="type" class="form-control">
+          <option value="" disabled selected>Post to</option>
+          <option value='forum'>Forum</option>
+          <option value='bounty'>Bounty</option>
+          <option value='codingbuddies'>Coding Buddies</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="skills"></label>
+        <input class="form-control" id="skills" name="skills" placeholder="Skills" />
+      </div>
+      <button type="submit" class="btn btn-dark btn-lg"><span class="glyphicon glyphicon-pencil"></span></button>
+    </form>
+  </section>
+
+  {{!-- USER POSTS --}}
+  <section class="profile-posts">
+    {{#if posts.length}}
+
+    <div class="page-title">
+      <h3>My Posts</h3>
+    </div>
+
+    <ul>
+      {{#each posts as |post|}}
+      <li>
+        {{> profile-posts post}}
+      </li>
+
+      {{!-- COMMENT SECTION --}}
+      <div id="comments">
+        <div class="container">
+          <div class="row comments-row">
+            <div class="col-sm-8">
+              <h2>Comments</h2>
+
+              {{!-- COMMENT START --}}
+              {{> comment-info post.comments}}
+              {{!-- COMMENT END --}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </section>
+
+  <script src="/javascript/add-post.js"></script>

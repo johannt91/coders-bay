@@ -1,0 +1,49 @@
+<section id='top' class="bounties-forum">
+    <div class="bounties-posts">
+      <h1>Bounties</h1>
+      {{#each posts as |post|}}
+      <li>
+        {{> forum-info post}}
+      </li>
+
+      <div id="comments">
+        <div class="container">
+          <div class="row comments-row">
+            <div class="col-sm-8">
+              <h2>Comments</h2>
+
+              {{!-- COMMENT START --}}
+              {{> comment-info post.comments}}
+              {{!-- COMMENT END --}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- Comment: This is for the post --}}
+      {{/each}}
+
+    </div>
+    {{!-- LATEST POSTS --}}
+    <aside class="latest-posts">
+      <h2>Latest posts</h2>
+      <div class="latest-post-list">
+        <div>
+        {{#each posts as |post|}}
+        <a href="#{{post.id}}">
+          <div class="latest-post-title">
+            <h4>{{post.title}}</h4>
+          </div>
+        </a>
+        {{/each}}
+        </div>
+        {{!-- Relative button to go to top --}}
+        <div class="headlineBackTop">
+          <h4><a href="#top">Back to the top!</a></h4>
+        </div>
+      </div>
+    </aside>
+</section>
+
+{{#if loggedIn}}
+      <script src="/javascript/comment.js"></script>
+  {{/if}}
